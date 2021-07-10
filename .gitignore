@@ -1,3 +1,6 @@
+# Tailwind output
+public/tailwind.css
+
 # Logs
 logs
 *.log
