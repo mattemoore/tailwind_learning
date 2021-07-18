@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="tailwind.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/cd2f6cfb64.js" crossorigin="anonymous"></script>
+</head>
+ 
+<body>
+  <div>
+    {{>_header}}
+  </div>
+  <div>
+    {{{body}}}
+  </div>
+</body>
+
+<script>
+  function selectNav(target) {
+    var businessNav = document.getElementById('businessNav');
+    var restaurantNav = document.getElementById('restaurantNav');
+    var eventsNav = document.getElementById('eventsNav');
+    var linksNav = document.getElementById('linksNav');
+    var navs = [businessNav, restaurantNav, eventsNav, linksNav];
+    navs.forEach(element => {
+      if (element.id == target) {
+        element.classList.remove('invisible');
+      }
+      else {
+        element.classList.add('invisible');
+      }
+    });
+  }
+</script>
+
+</html>
+<!--
+Find a Business
+ Find a Local Business
+ Find a Restaurant
+ Find a Local Restaurant
+ Local Events
+ Find a Local Event
+ Quick Links
+ 2019 Federal Elections
+ 2018 Municipal Elections
+ Traffic Cameras
+ Local Movie Listings
+ Local Gas Prices
+ -->
