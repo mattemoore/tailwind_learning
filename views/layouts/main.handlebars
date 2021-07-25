@@ -12,27 +12,14 @@
   <div>
     {{>_header}}
   </div>
-  <div>
-    {{{body}}}
+  <div class='flex flex-col px-5 lg:flex-row lg:px-28'>
+    <div class='flex p-2 md:flex-none md:w-2/3' id='contentContainer'>
+      {{{body}}}
+    </div>
+    <div class='flex p-2 flex-wrap flex-col lg:w-1/3' id='rightMenuContainer'>
+      {{>_rightMenu}}
+    </div>
   </div>
 </body>
-
-<script>
-  function selectNav(target) {
-    var businessNav = document.getElementById('businessNav');
-    var restaurantNav = document.getElementById('restaurantNav');
-    var eventsNav = document.getElementById('eventsNav');
-    var linksNav = document.getElementById('linksNav');
-    var navs = [businessNav, restaurantNav, eventsNav, linksNav];
-    navs.forEach(element => {
-      if (element.id == target) {
-        element.classList.remove('invisible');
-      }
-      else {
-        element.classList.add('invisible');
-      }
-    });
-  }
-</script>
 
 </html>

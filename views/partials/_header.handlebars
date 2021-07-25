@@ -1,40 +1,19 @@
-<header class='bg-blue-700 text-gray-200 p-3 md:max-h-24'>
+<header class='bg-blue-700 text-gray-200 p-3 md:max-h-28'>
   <nav class='flex flex-col p-2 md:flex-row'>
     <div class='flex-1 p-1'><a href='https://ajaxpickering.ca/' alt='AjaxPickering.ca home page'>
-        <img src='ajaxpickering-logo.png' alt='AjaxPickering.ca logo' class='h-16 md:h-1/4'></a>
+        <img src='ajaxpickering-logo.png' alt='AjaxPickering.ca logo' class='h-16'></a>
     </div>
     <div class='flex-1 px-2 pt-3'>
       <button class='font-bold hover:text-green-400' type='button' onclick='selectNav("businessNav")'>
         <i class='fas fa-briefcase p-2'></i>Find a Business</button>
-      <ul class='invisible bg-blue-700 p-2 md:bg-gray-600 md:rounded-sm' id='businessNav'>
-        <li>
-          <button class='text-sm hover:text-green-400' type='button'>
-            <i class='fas fa-search p-1'></i>Find a Local Business
-          </button>
-        </li>
-      </ul>
     </div>
     <div class='flex-1 px-2 pt-3'>
       <button class='font-bold hover:text-green-400' type='button' onclick='selectNav("restaurantNav")'>
         <i class="fas fa-utensils p-2"></i>Find a Restaurant</button>
-      <ul class='invisible bg-blue-700 p-2 md:bg-gray-600 md:rounded-sm' id='restaurantNav'>
-        <li>
-          <button class='text-sm hover:text-green-400' type='button'>
-            <i class='fas fa-search p-1'></i>Find a Local Restaurant
-          </button>
-        </li>
-      </ul>
     </div>
     <div class='flex-1 px-2 pt-3'>
       <button class='font-bold hover:text-green-400' type='button' onclick='selectNav("eventsNav")'>
         <i class="fas fa-calendar-alt p-2"></i>Local Events</button>
-      <ul class='invisible bg-blue-700 p-2 md:bg-gray-600 md:rounded-sm' id='eventsNav'>
-        <li>
-          <button class='text-sm hover:text-green-400' type='button'>
-            <i class='fas fa-search p-1'></i>Find a Local Event
-          </button>
-        </li>
-      </ul>
     </div>
     <div class='flex-1 px-2 pt-3'>
       <button class='font-bold hover:text-green-400' type='button' onclick='selectNav("linksNav")'>
@@ -64,3 +43,18 @@
     </div>
   </nav>
 </header>
+
+<script>
+  function selectNav(target) {
+   var linksNav = document.getElementById('linksNav');
+    var navs = [linksNav];
+    navs.forEach(element => {
+      if (element.id == target) {
+        element.classList.remove('invisible');
+      }
+      else {
+        element.classList.add('invisible');
+      }
+    });
+  }
+</script>

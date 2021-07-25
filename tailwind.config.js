@@ -8,6 +8,9 @@ module.exports = {
         sky: colors.sky,
         cyan: colors.cyan,
       },
+        zIndex: {
+        'neg': '-1',
+      }
     },
   },
   variants: {
